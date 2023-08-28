@@ -3,6 +3,8 @@
 // Free To Use For Comfort and Peace 
 //==================================================
 
+using FluentAssertions;
+using Microsoft.AspNetCore.Http;
 using Moq;
 using Sheenam.Api.Brokers.Storages;
 using Sheenam.Api.Models.Foundations.Guests;
@@ -26,7 +28,6 @@ namespace Sheenam.Api.Tests.Unit.Services.Foundations.Guests
         }
 
 
-        [Fact]
         private static Guest CreateRandomGuest() =>
             CreateGuestFiller(date: GetRandomDateTimeOffset()).Create();   
 
